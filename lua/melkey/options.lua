@@ -22,3 +22,4 @@ vim.opt.wildignorecase = true
 vim.opt.showmatch = true
 vim.opt.ignorecase = true
 vim.opt.laststatus = 3
+vim.opt.clipboard = "unnamedplus"
