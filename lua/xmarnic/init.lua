@@ -1,7 +1,7 @@
-require("melkey.autocmds")
-require("melkey.options")
-require("melkey.keymaps")
-require("melkey.commands")
+require("xmarnic.autocmds")
+require("xmarnic.options")
+require("xmarnic.keymaps")
+require("xmarnic.commands")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -16,4 +16,4 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("melkey.plugins")
+require("lazy").setup("xmarnic.plugins")
