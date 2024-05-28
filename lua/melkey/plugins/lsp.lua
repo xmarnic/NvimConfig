@@ -236,6 +236,7 @@ return {
 			"stylua",
 			"prettier",
 			"eslint_d",
+			"bash-language-server",
 		}
 
 		require("mason-tool-installer").setup({ ensure_installed = tools })
@@ -262,6 +263,7 @@ return {
 		lspconfig.html.setup({})
 		lspconfig.cssls.setup({})
 		lspconfig.tailwindcss.setup({})
+		lspconfig.bashls.setup({})
 		require("typescript").setup({
 			server = { on_attach = on_attach },
 		})
@@ -271,12 +273,15 @@ return {
 			lsp_on_attach = on_attach,
 		})
 
+		lspconfig.pylsp.setup({})
+
 		lsp.setup()
 
 		-- Linter/Formatter registeration via null-ls
 		local null_ls = require("null-ls")
 		null_ls.setup({
 			sources = {
+				null_ls.builtins.formatting.black,
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.prettier,
 				null_ls.builtins.diagnostics.eslint_d,
