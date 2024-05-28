@@ -1,6 +1,7 @@
 require("melkey.autocmds")
 require("melkey.options")
 require("melkey.keymaps")
+require("melkey.commands")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
