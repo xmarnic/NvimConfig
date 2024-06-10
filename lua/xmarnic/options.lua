@@ -23,3 +23,4 @@ vim.opt.showmatch = true
 vim.opt.ignorecase = true
 vim.opt.laststatus = 3
 vim.opt.clipboard = "unnamedplus"
+vim.opt.iskeyword:remove("_")
