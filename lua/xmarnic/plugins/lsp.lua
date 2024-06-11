@@ -34,6 +34,7 @@ return {
 		{ "folke/neodev.nvim", lazy = false },
 		{ "jose-elias-alvarez/typescript.nvim", lazy = false },
 		{ "ray-x/go.nvim", lazy = false, dependencies = { "ray-x/guihua.lua" } },
+		{ "mattn/emmet-vim", ft = { "html", "css", "javascript", "typescript" } },
 	},
 	config = function()
 		-- Setup functions and options to be used further down
